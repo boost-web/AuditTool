@@ -23,7 +23,7 @@ class audit {
         $this->descriptions = $dom->getElementsByTagName('meta');
         $this->h1s = $dom->getElementsByTagName('h1');
         $this->imgs = $dom->getElementsByTagName('img');
-        if ( count( explode('/', $domain) ) < 3 ) {
+        if ( count( explode('/', $domain) ) == 3 ) {
             $this->robots = @file_get_contents($domain . '/robots.txt');
             $this->sitemap = @file_get_contents($domain . '/sitemap.xml');
         } else {
